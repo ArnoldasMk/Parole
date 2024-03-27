@@ -317,7 +317,7 @@ NCountry = {
 	WAR_SUPPORT_DEFENSIVE_WAR = 0.2,				-- Impact of being in defensive war
 	WAR_SUPPORT_TENSION_IMPACT = 0.4,				-- Total impact of world tension
 	MIN_STABILITY = 0.0,
-	MAX_STABILITY = 1.0,
+	MAX_STABILITY = 2.0,
 	MIN_WAR_SUPPORT = 0.0,
 	MAX_WAR_SUPPORT = 1.0,
 	FRONT_PROVINCE_SCORE = 20,    					-- Max province score of a front. Used for the hostile troop alert
@@ -578,7 +578,7 @@ NResistance = {
 
 NProduction = {
 	MAX_EQUIPMENT_RESOURCES_NEED = 3, 	-- Max number of different strategic resources an equipment can be dependent on.
-	MAX_CIV_FACTORIES_PER_LINE = 15,	-- Max number of factories that can be assigned a single production line.
+	MAX_CIV_FACTORIES_PER_LINE = 30,	-- Max number of factories that can be assigned a single production line.
 	DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 10,
 	FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 5,
 	CONVOY_MAX_NAV_FACTORIES_PER_LINE = 15,
@@ -710,7 +710,7 @@ NBuildings = {
 	OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 0.5, --Scale factor of extra shared slots when state owner change.
 	DESTRUCTION_COOLDOWN_IN_WAR = 30,	-- Number of days cooldown between removal of buildings in war times
 
-	INFRASTRUCTURE_RESOURCE_BONUS = 0.2, -- multiplicative resource bonus for each level of (non damaged) infrastructure
+	INFRASTRUCTURE_RESOURCE_BONUS = 0.4, -- multiplicative resource bonus for each level of (non damaged) infrastructure
 	SUPPLY_ROUTE_RESOURCE_BONUS = 0.2,   -- multiplicative resource bonus for having a railway/naval connection to the capital
 	INFRASTRUCTURE_MUD_EFFECT = -0.8, -- multiplicative effect on mud growth for max infra
 },
@@ -796,12 +796,12 @@ NMilitary = {
 	CORPS_COMMANDER_DIVISIONS_CAP = 24,			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
 	DIVISION_SIZE_FOR_XP = 8,                   -- how many battalions should a division have to count as a full divisions when calculating XP stuff
 	CORPS_COMMANDER_ARMIES_CAP = -1,			-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
-	FIELD_MARSHAL_DIVISIONS_CAP = 24,			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+	FIELD_MARSHAL_DIVISIONS_CAP = 72,			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 	FIELD_MARSHAL_ARMIES_CAP = 5,				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 
 	UNIT_LEADER_GENERATION_CAPITAL_CONTINENT_FACTOR = 100, --Integer factor to multiply manpower.
 
-	RECON_SKILL_IMPACT = 5, -- how many skillpoints is a recon advantage worth when picking a tactic.
+	RECON_SKILL_IMPACT = 10, -- how many skillpoints is a recon advantage worth when picking a tactic.
 
 	MAX_DIVISION_BRIGADE_WIDTH = 5,			-- Max width of regiments in division designer.
 	MAX_DIVISION_BRIGADE_HEIGHT = 5,		-- Max height of regiments in division designer.
@@ -813,9 +813,9 @@ NMilitary = {
 	BASE_DIVISION_BRIGADE_CHANGE_COST = 5,	--Base cost to change a regiment column.
 	BASE_DIVISION_SUPPORT_SLOT_COST = 10, 	--Base cost to unlock a support slot
 
-	MAX_ARMY_EXPERIENCE = 500,			--Max army experience a country can store
-	MAX_NAVY_EXPERIENCE = 500,			--Max navy experience a country can store
-	MAX_AIR_EXPERIENCE = 500,				--Max air experience a country can store
+	MAX_ARMY_EXPERIENCE = 99999,			--Max army experience a country can store
+	MAX_NAVY_EXPERIENCE = 99999,			--Max navy experience a country can store
+	MAX_AIR_EXPERIENCE = 99999,				--Max air experience a country can store
 
 	COMBAT_MINIMUM_TIME = 4,			-- Shortest time possible for a combat in hours
 	SPOTTING_QUALITY_DROP_HOURS = 4, 	-- Each X hours the intel quality drops after unit was spotted.
@@ -829,7 +829,7 @@ NMilitary = {
 	LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.053,       -- global damage modifier
 	LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.032,    -- air global damage modifier
 	LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.032,    -- global damage modifier
-	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 3, -- how many CAS/TAC can enter a combat depending on enemy width there
+	LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 9, -- how many CAS/TAC can enter a combat depending on enemy width there
 	LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 2,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 6,   -- extra damage dice if our armor outclasses enemy
 	LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.5, -- damage reduction if armor outclassing enemy
@@ -871,8 +871,8 @@ NMilitary = {
 	CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.5, -- if there are multiple leaders in same combat, each one gets thisratio + (1-thisratio)/num leaders. amount of xp each general gets scales 1 0.75 0.66 etc for 1 2 3 generals
 	BASE_LEADER_TRAIT_GAIN_XP = 0.45,			   -- Base xp gain for traits per hour for armies
 	MAX_NUM_TRAITS = -1,						   -- cant have more, -1 to disable
-	ENEMY_AIR_SUPERIORITY_IMPACT = -0.35,          -- effect on defense due to enemy air superiorty
-	ENEMY_AIR_SUPERIORITY_DEFENSE = 0.70,	       -- more AA attack will approach this amount of help (diminishing returns)
+	ENEMY_AIR_SUPERIORITY_IMPACT = 0.0,          -- effect on defense due to enemy air superiorty
+	ENEMY_AIR_SUPERIORITY_DEFENSE = 0.0,	       -- more AA attack will approach this amount of help (diminishing returns)
 	ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112, -- how quickly defense approaches the max impact diminishing returns curve
 	ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.3,     -- effect on speed due to enemy air superiority
 
@@ -932,7 +932,7 @@ NMilitary = {
 	TRAINING_ATTRITION = 0.05,		  			   -- amount of extra attrition from being in training
 	TRAINING_MIN_STRENGTH = 0.1,					-- if strength is less than this, the unit will pause training until it's been reinforced
 	TRAINING_MAX_DAILY_COUNTRY_EXP = 0.08,			-- Maximum army XP gained per day from training
-	AIR_SUPPORT_BASE = 0.25,                        -- CAS bonus factor for air support moddifier for land unit in combat
+	AIR_SUPPORT_BASE = 0.55,                        -- CAS bonus factor for air support moddifier for land unit in combat
 	LOW_SUPPLY = 0.99,							   -- When the supply status of an unit becomes low.
 	BORDER_WAR_ATTRITION_FACTOR = 0.1,			   -- How much of borderwar balance of power makes it into attrition
 	BORDER_WAR_VICTORY = 0.8,					   -- At wich border war balance of power is victory declared
@@ -1152,7 +1152,7 @@ NMilitary = {
 
 	ARMY_FUEL_COST_MULT = 0.5,						-- fuel cost multiplier for all army related stuff
 	ARMY_COMBAT_FUEL_MULT =   1.0,					-- fuel consumption ratio in combat (plus ARMY_MOVEMENT_FUEL_MULT if you are also moving. ie offensive combat)
-	ARMY_TRAINING_FUEL_MULT = 1.0,					-- fuel consumption ratio while training
+	ARMY_TRAINING_FUEL_MULT = 0.0,					-- fuel consumption ratio while training
 	ARMY_MOVEMENT_FUEL_MULT = 1.0,					-- fuel consumption ratio while moving
 	ARMY_NAVAL_TRANSFER_FUEL_MULT = 0.0,			-- fuel consumption ratio while naval transferring
 	ARMY_STRATEGIC_DEPLOYMENT_FUEL_MULT = 0.0,		-- fuel consumption ratio while doing strategic deployment
@@ -1518,9 +1518,9 @@ NNavy = {
 	NAVAL_TRANSFER_BASE_NAVAL_DIST_ADD = 100,						-- Extra cost for naval movement ( compared to land movement ) when deciding what ports to use for a naval transfer
 	NAVAL_TRANSFER_BASE_NAVAL_DIST_MULT = 20,						-- Multiplier for the cost of naval movement ( compared to land movement ) when deciding what ports to use for naval transfer
 	NAVAL_SUPREMACY_CAN_INVADE = 0.5,								-- required naval supremacy to perform invasions on an area
-	CARRIER_STACK_PENALTY = 4,										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
+	CARRIER_STACK_PENALTY = 10,										-- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
 	CARRIER_STACK_PENALTY_EFFECT = 0.2,								-- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
-	SHORE_BOMBARDMENT_CAP = 0.25,
+	SHORE_BOMBARDMENT_CAP = 0.5,
 	ANTI_AIR_TARGETING = 0.9,                                       -- how good ships are at hitting aircraft
 	MIN_TRACTED_ASSIST_DAMAGE_RATIO = 0.05,							-- How much damage counts as assist damage
 	SUPPLY_NEED_FACTOR = 4,										    -- multiplies supply usage
@@ -1560,7 +1560,7 @@ NNavy = {
 		1.0, -- CONVOY ESCORT
 		1.0, -- MINES PLANTING
 		1.0, -- MINES SWEEPING
-		0.6, -- TRAIN
+		0.0, -- TRAIN
 		0.0, -- RESERVE_FLEET (consumes fuel HOLD_MISSION_MOVEMENT_COST fuel while moving)
 		1.0, -- NAVAL_INVASION_SUPPORT (does not cost fuel at base, only costs while doing bombardment and escorting units)
 	},
@@ -1568,7 +1568,7 @@ NNavy = {
 	HOLD_MISSION_MOVEMENT_COST = 1.0,								-- ships on hold cost this much fuel while moving
 	ON_BASE_FUEL_COST = 0.0,										-- ships that waits at naval bases cost this ratio
 	IN_COMBAT_FUEL_COST = 2.0,										-- ships in combat will get this ratio for fuel cost
-	TRAINING_FUEL_COST_FOR_ESCORT_SHIPS = 0.15,						-- ships that are on training mission but not training (ie they are at max xp and training will cancel at max xp) will consume this ratio of fuel
+	TRAINING_FUEL_COST_FOR_ESCORT_SHIPS = 0.0,						-- ships that are on training mission but not training (ie they are at max xp and training will cancel at max xp) will consume this ratio of fuel
 
 	MAX_FUEL_FLOW_MULT = 2.0, -- max fuel flow ratio for ships, which will be multiplied by supply
 	FUEL_COST_MULT = 0.10, -- fuel multiplier for all naval missions
@@ -1863,8 +1863,8 @@ NNavy = {
 	DEPTH_CHARGE_STAT_FOR_SHIP_TO_BE_SUB_HUNTER = 15,					-- amount of depth charge required for a ship to be considred a sub hunter and so good for convoy escort
 	SUB_DETECTION_STAT_FOR_SHIP_TO_BE_SUB_HUNTER = 2,					-- amount of sub detection required for a ship to be considered a sub hunter
 
-	HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.1,  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier
-	LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.05, -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier
+	HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.2,  -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier
+	LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT							= 0.1, -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier
 
 	GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
 		80.0,	-- big guns
@@ -2743,9 +2743,9 @@ NAI = {
 
 	LAND_COMBAT_FIGHTERS_PER_PLANE = 1.0,				-- Amount of air superiority planes requested per enemy plane
 	LAND_COMBAT_CAS_PLANES_PER_ENEMY_ARMY_LIMIT = 200,	-- Limit of CAS planes requested by enemy armies
-	LAND_COMBAT_CAS_PER_ENEMY_ARMY = 30,				-- Amount of CAS planes requested per enemy division
+	LAND_COMBAT_CAS_PER_ENEMY_ARMY = 120,				-- Amount of CAS planes requested per enemy division
 	LAND_COMBAT_ANTI_LOGISTICS_PER_ENEMY_ARMY = 0.1,    -- Amount of CAS planes requested per enemy army for anti-logistics
-	LAND_COMBAT_CAS_PER_COMBAT = 60,					-- Amount of CAS requested per combat
+	LAND_COMBAT_CAS_PER_COMBAT = 120,					-- Amount of CAS requested per combat
 	LAND_COMBAT_BOMBERS_PER_LAND_FORT_LEVEL = 6,		-- Amount of bomber planes requested per enemy land fort level
 	LAND_COMBAT_BOMBERS_PER_COASTAL_FORT_LEVEL = 6,		-- Amount of bomber planes requested per enemy coastal fort level
 	LAND_COMBAT_MIN_EXCORT_PLANES = 80,					-- Min amount of planes requested to excort operations
