@@ -2742,7 +2742,6 @@ form_roman_empire_category = {
 			custom_trigger_tooltip = {
 				tooltip = form_country_mare_nostrum_required_states_tt
 				controls_state = 163
-				controls_state = 853
 				controls_state = 103	
 				controls_state = 104 
 				controls_state = 804
@@ -4328,7 +4327,6 @@ form_hre_category = {
 
 		allowed = {
 			original_tag = GER
-			has_dlc = "Waking the Tiger"
 		}
 
 		available = {
@@ -4357,60 +4355,46 @@ form_hre_category = {
 				controls_state = 67
 				controls_state = 63
 			}
-			controls_state = 8
+			controls_state = 8 #Luxembourg
 			controls_state = 28
-			controls_state = 735
+		
+			#Czechoslovakia
 			controls_state = 69
 			controls_state = 9
 			controls_state = 75
 			controls_state = 74
-			controls_state = 158
-			controls_state = 159
-			controls_state = 39
-			controls_state = 850
-			controls_state = 160
-			controls_state = 161
-			controls_state = 162
-			controls_state = 736
-			controls_state = 852
-			# Switzerland
-			custom_trigger_tooltip = {
-				tooltip = form_country_switzerland_required_states_tt
-				controls_state = 3 #Swiss Plateau
-				controls_state = 151 #Eastern Swiss Alps
-				controls_state = 845 #Jura Mountains
-				controls_state = 847 #Western Swiss Alps
-				controls_state = 846 #Ticino
-			}
-			# Austria
+
+			
 			custom_trigger_tooltip = {
 				tooltip = form_country_austria_required_states_tt
-				controls_state = 848
 				controls_state = 153
 				controls_state = 152
 				controls_state = 4
-				controls_state = 848 #Vorarlberg
+				controls_state = 848 #Vorarlberg	
 			}
-			# Netherlands
-			custom_trigger_tooltip = {
-				tooltip = form_eu_netherlands_required_states_tt
-				controls_state = 7
-				controls_state = 35
-				controls_state = 36
-			}
-			# Belgium
-			custom_trigger_tooltip = {
-				tooltip = form_eu_belgium_required_states_tt
-				controls_state = 6
-				controls_state = 34
-			}
+			# Italy
+			controls_state = 39 # ITALY
+			controls_state = 850 # ITALY
+			controls_state = 853 # ITALY
+			controls_state = 736 # ITALY
+			controls_state = 852 # ITALY
+			controls_state = 102 # ITALY
+
+			controls_state = 912 # Denmark
+			controls_state = 188 # Lietuva
+
+			controls_state = 762 # Lietuva
+			controls_state = 86 # Poland
+			controls_state = 762 # Poland
+			controls_state = 807 # Poland
+			controls_state = 85 # Poland	
+			
+
 		}
 
 		visible = {
 			AND = {
 				original_tag = GER
-				has_government = neutrality
-				has_country_leader = { ruling_only = yes character = GER_victoria }
 			}
 			NOT = { has_global_flag = form_hre_flag }
 		}
@@ -4433,43 +4417,27 @@ form_hre_category = {
 			736 = { add_core_of = ROOT }
 			850 = { add_core_of = ROOT }
 			852 = { add_core_of = ROOT }
-			# Switzerland
-			custom_effect_tooltip = form_country_switzerland_coring_states_tt
-			hidden_effect = {
-				3 = { add_core_of = ROOT }
-				151 = { add_core_of = ROOT }
-				845 = { add_core_of = ROOT }
-				847 = { add_core_of = ROOT }
-				846 = { add_core_of = ROOT }
-			}
-			# Austria
-			custom_effect_tooltip = form_country_austria_coring_states_tt
-			hidden_effect = {
-				848 = { add_core_of = ROOT }
-				153 = { add_core_of = ROOT }
-				152 = { add_core_of = ROOT }
-				4 = { add_core_of = ROOT }
-				848 = { add_core_of = ROOT }
-			}
-			# Netherlands
-			custom_effect_tooltip = form_eu_netherlands_coring_states_tt
-			hidden_effect = {
-				7 = { add_core_of = ROOT }
-				35 = { add_core_of = ROOT }
-				36 = { add_core_of = ROOT }
-			}
-			# Belgium
-			custom_effect_tooltip = form_eu_belgium_coring_states_tt
-			hidden_effect = {
-				6 = { add_core_of = ROOT }
-				34 = { add_core_of = ROOT }
-			}
-			hidden_effect = {
-				news_event = { id = wtt_news.70 hours = 6 }
-				set_global_flag = form_hre_flag
-			}
-		}
 
+			8 = { add_core_of = ROOT }
+			28 = { add_core_of = ROOT }
+			69 = { add_core_of = ROOT }
+			9 = { add_core_of = ROOT }
+			75 = { add_core_of = ROOT }
+			74 = { add_core_of = ROOT }
+			39 = { add_core_of = ROOT }
+			850 = { add_core_of = ROOT }
+			853 = { add_core_of = ROOT }
+			736 = { add_core_of = ROOT }
+			852 = { add_core_of = ROOT }
+			102 = { add_core_of = ROOT }
+			912 = { add_core_of = ROOT }
+			188 = { add_core_of = ROOT }
+			762 = { add_core_of = ROOT }
+			86 = { add_core_of = ROOT }
+			807 = { add_core_of = ROOT }
+			85 = { add_core_of = ROOT }		
+			72 = { add_core_of = ROOT }		
+		}
 		ai_will_do = {
 			factor = 200
 			modifier = {
