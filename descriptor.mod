@@ -4,5 +4,6 @@ tags={
 }
 replace_path="gfx/loadingscreens"
 name="Parole"
-supported_version="1.14.2"
 picture="thumbnail.png"
+supported_version="1.14.3"
+remote_file_id="3205368162"
